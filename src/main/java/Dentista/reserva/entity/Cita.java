@@ -35,7 +35,6 @@ public class Cita {
 
     private String motivo;
 
-    @Column(nullable = false, columnDefinition = "VARCHAR(50) DEFAULT 'Pendiente'")
-    private String estado;
+    @Column(nullable = false)
+    private String estado = "Pendiente"; // Valor por defecto en el código
 }
-
