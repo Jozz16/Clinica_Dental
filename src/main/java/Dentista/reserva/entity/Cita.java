@@ -21,7 +21,7 @@ public class Cita {
 
     @ManyToOne
     @JoinColumn(name = "paciente_id", nullable = false)
-    private Usuario paciente;
+    private UserEntity paciente;
 
     @ManyToOne
     @JoinColumn(name = "dentista_id", nullable = false)

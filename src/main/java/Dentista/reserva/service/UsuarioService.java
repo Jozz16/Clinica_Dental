@@ -1,7 +1,7 @@
 package Dentista.reserva.service;
 
-import Dentista.reserva.entity.Usuario;
-import Dentista.reserva.repository.UsuarioRepository;
+import Dentista.reserva.entity.UserEntity;
+import Dentista.reserva.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -11,21 +11,21 @@ import java.util.Optional;
 public class UsuarioService {
 
     @Autowired
-    private UsuarioRepository usuarioRepository;
+    private UserRepository usuarioRepository;
 
-    public List<Usuario> obtenerTodosLosUsuarios() {
+    public List<UserEntity> obtenerTodosLosUsuarios() {
         return usuarioRepository.findAll();
     }
 
-    public Optional<Usuario> obtenerUsuarioPorId(Long id) {
+    public Optional<UserEntity> obtenerUsuarioPorId(Long id) {
         return usuarioRepository.findById(id);
     }
 
-    public Optional<Usuario> obtenerUsuarioPorEmail(String email) {
+    public Optional<UserEntity> obtenerUsuarioPorEmail(String email) {
         return usuarioRepository.findByEmail(email);
     }
 
-    public Usuario guardarUsuario(Usuario usuario) {
+    public UserEntity guardarUsuario(UserEntity usuario) {
         return usuarioRepository.save(usuario);
     }
 

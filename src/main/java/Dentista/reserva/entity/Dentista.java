@@ -17,7 +17,7 @@ public class Dentista {
 
     @OneToOne
     @JoinColumn(name = "usuario_id", unique = true, nullable = false)
-    private Usuario usuario;
+    private UserEntity usuario;
 
     @Column(nullable = false)
     private String especialidad;
